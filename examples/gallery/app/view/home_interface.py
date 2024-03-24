@@ -29,7 +29,7 @@ class BannerWidget(QWidget):
         self.vBoxLayout.setContentsMargins(0, 20, 0, 0)
         self.vBoxLayout.addWidget(self.galleryLabel)
         self.vBoxLayout.addWidget(self.linkCardView, 1, Qt.AlignBottom)
-        self.vBoxLayout.setAlignment(Qt.AlignLeft | Qt.AlignTop)
+        self.vBoxLayout.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignTop)
 
         self.linkCardView.addCard(
             ':/gallery/images/logo.png',

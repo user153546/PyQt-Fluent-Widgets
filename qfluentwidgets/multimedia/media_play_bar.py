@@ -230,7 +230,7 @@ class SimpleMediaPlayBar(MediaPlayBarBase):
 
         self.hBoxLayout.setContentsMargins(10, 4, 10, 4)
         self.hBoxLayout.setSpacing(6)
-        self.hBoxLayout.addWidget(self.playButton, 0, Qt.AlignLeft)
+        self.hBoxLayout.addWidget(self.playButton, 0, Qt.AlignmentFlag.AlignLeft)
         self.hBoxLayout.addWidget(self.progressSlider, 1)
         self.hBoxLayout.addWidget(self.volumeButton, 0)
 
@@ -273,7 +273,7 @@ class StandardMediaPlayBar(MediaPlayBarBase):
 
         self.vBoxLayout.addLayout(self.timeLayout)
         self.timeLayout.setContentsMargins(10, 0, 10, 0)
-        self.timeLayout.addWidget(self.currentTimeLabel, 0, Qt.AlignLeft)
+        self.timeLayout.addWidget(self.currentTimeLabel, 0, Qt.AlignmentFlag.AlignLeft)
         self.timeLayout.addWidget(self.remainTimeLabel, 0, Qt.AlignRight)
 
         self.vBoxLayout.addStretch(1)
@@ -283,12 +283,12 @@ class StandardMediaPlayBar(MediaPlayBarBase):
         self.centerButtonLayout.setContentsMargins(0, 0, 0, 0)
         self.rightButtonLayout.setContentsMargins(0, 0, 4, 0)
 
-        self.leftButtonLayout.addWidget(self.volumeButton, 0, Qt.AlignLeft)
+        self.leftButtonLayout.addWidget(self.volumeButton, 0, Qt.AlignmentFlag.AlignLeft)
         self.centerButtonLayout.addWidget(self.skipBackButton)
         self.centerButtonLayout.addWidget(self.playButton)
         self.centerButtonLayout.addWidget(self.skipForwardButton)
 
-        self.buttonLayout.addWidget(self.leftButtonContainer, 0, Qt.AlignLeft)
+        self.buttonLayout.addWidget(self.leftButtonContainer, 0, Qt.AlignmentFlag.AlignLeft)
         self.buttonLayout.addWidget(self.centerButtonContainer, 0, Qt.AlignHCenter)
         self.buttonLayout.addWidget(self.rightButtonContainer, 0, Qt.AlignRight)
 

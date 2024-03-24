@@ -71,13 +71,13 @@ class CustomTitleBar(TitleBar):
         self.iconLabel.setFixedSize(18, 18)
         self.hBoxLayout.insertSpacing(0, 20)
         self.hBoxLayout.insertWidget(
-            1, self.iconLabel, 0, Qt.AlignLeft | Qt.AlignVCenter)
+            1, self.iconLabel, 0, Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter)
         self.window().windowIconChanged.connect(self.setIcon)
 
         # add title label
         self.titleLabel = QLabel(self)
         self.hBoxLayout.insertWidget(
-            2, self.titleLabel, 0, Qt.AlignLeft | Qt.AlignVCenter)
+            2, self.titleLabel, 0, Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter)
         self.titleLabel.setObjectName('titleLabel')
         self.window().windowTitleChanged.connect(self.setTitle)
 
@@ -224,7 +224,7 @@ class Window(FramelessWindow):
 if __name__ == '__main__':
     QApplication.setHighDpiScaleFactorRoundingPolicy(
         Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
     app = QApplication(sys.argv)

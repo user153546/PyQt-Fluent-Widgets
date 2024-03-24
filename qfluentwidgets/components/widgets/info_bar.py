@@ -150,7 +150,7 @@ class InfoBar(QFrame):
         self.textLayout.setSpacing(5)
 
         # add icon to layout
-        self.hBoxLayout.addWidget(self.iconWidget, 0, Qt.AlignTop | Qt.AlignLeft)
+        self.hBoxLayout.addWidget(self.iconWidget, 0, Qt.AlignTop | Qt.AlignmentFlag.AlignLeft)
 
         # add title to layout
         self.textLayout.addWidget(self.titleLabel, 1, Qt.AlignTop)
@@ -173,7 +173,7 @@ class InfoBar(QFrame):
 
         # add close button to layout
         self.hBoxLayout.addSpacing(12)
-        self.hBoxLayout.addWidget(self.closeButton, 0, Qt.AlignTop | Qt.AlignLeft)
+        self.hBoxLayout.addWidget(self.closeButton, 0, Qt.AlignTop | Qt.AlignmentFlag.AlignLeft)
 
         self._adjustText()
 
@@ -209,7 +209,7 @@ class InfoBar(QFrame):
         """ add widget to info bar """
         self.widgetLayout.addSpacing(6)
         align = Qt.AlignTop if self.orient == Qt.Vertical else Qt.AlignVCenter
-        self.widgetLayout.addWidget(widget, stretch, Qt.AlignLeft | align)
+        self.widgetLayout.addWidget(widget, stretch, Qt.AlignmentFlag.AlignLeft | align)
 
     def setCustomBackgroundColor(self, light, dark):
         """ set the custom background color

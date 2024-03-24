@@ -65,14 +65,14 @@ class ToolBar(QWidget):
 
         self.buttonLayout.setSpacing(4)
         self.buttonLayout.setContentsMargins(0, 0, 0, 0)
-        self.buttonLayout.addWidget(self.documentButton, 0, Qt.AlignLeft)
-        self.buttonLayout.addWidget(self.sourceButton, 0, Qt.AlignLeft)
+        self.buttonLayout.addWidget(self.documentButton, 0, Qt.AlignmentFlag.AlignLeft)
+        self.buttonLayout.addWidget(self.sourceButton, 0, Qt.AlignmentFlag.AlignLeft)
         self.buttonLayout.addStretch(1)
         self.buttonLayout.addWidget(self.themeButton, 0, Qt.AlignRight)
         self.buttonLayout.addWidget(self.separator, 0, Qt.AlignRight)
         self.buttonLayout.addWidget(self.supportButton, 0, Qt.AlignRight)
         self.buttonLayout.addWidget(self.feedbackButton, 0, Qt.AlignRight)
-        self.buttonLayout.setAlignment(Qt.AlignVCenter | Qt.AlignLeft)
+        self.buttonLayout.setAlignment(Qt.AlignVCenter | Qt.AlignmentFlag.AlignLeft)
 
         self.themeButton.installEventFilter(ToolTipFilter(self.themeButton))
         self.supportButton.installEventFilter(ToolTipFilter(self.supportButton))
@@ -155,10 +155,10 @@ class ExampleCard(QWidget):
 
         self.widget.show()
 
-        self.bottomLayout.addWidget(self.sourcePathLabel, 0, Qt.AlignLeft)
+        self.bottomLayout.addWidget(self.sourcePathLabel, 0, Qt.AlignmentFlag.AlignLeft)
         self.bottomLayout.addStretch(1)
         self.bottomLayout.addWidget(self.linkIcon, 0, Qt.AlignRight)
-        self.bottomLayout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.bottomLayout.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter)
 
     def eventFilter(self, obj, e):
         if obj is self.sourceWidget:

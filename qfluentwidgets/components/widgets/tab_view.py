@@ -314,7 +314,7 @@ class TabItem(PushButton):
 
         painter.setPen(pen)
         painter.setFont(self.font())
-        painter.drawText(rect, Qt.AlignVCenter | Qt.AlignLeft, self.text())
+        painter.drawText(rect, Qt.AlignVCenter | Qt.AlignmentFlag.AlignLeft, self.text())
 
 
 class TabBar(SingleDirectionScrollArea):
@@ -373,9 +373,9 @@ class TabBar(SingleDirectionScrollArea):
         self.__initLayout()
 
     def __initLayout(self):
-        self.hBoxLayout.setAlignment(Qt.AlignVCenter | Qt.AlignLeft)
-        self.itemLayout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
-        self.widgetLayout.setAlignment(Qt.AlignLeft | Qt.AlignVCenter)
+        self.hBoxLayout.setAlignment(Qt.AlignVCenter | Qt.AlignmentFlag.AlignLeft)
+        self.itemLayout.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter)
+        self.widgetLayout.setAlignment(Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter)
 
         self.itemLayout.setContentsMargins(5, 5, 5, 5)
         self.widgetLayout.setContentsMargins(0, 0, 0, 0)
@@ -389,7 +389,7 @@ class TabBar(SingleDirectionScrollArea):
         self.hBoxLayout.addLayout(self.itemLayout)
         self.hBoxLayout.addSpacing(3)
 
-        self.widgetLayout.addWidget(self.addButton, 0, Qt.AlignLeft)
+        self.widgetLayout.addWidget(self.addButton, 0, Qt.AlignmentFlag.AlignLeft)
         self.hBoxLayout.addLayout(self.widgetLayout)
         self.hBoxLayout.addStretch(1)
 

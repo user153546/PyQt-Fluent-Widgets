@@ -179,7 +179,7 @@ class AppInfoCard(SimpleCardWidget):
         self.statisticsLayout.addWidget(self.scoreWidget)
         self.statisticsLayout.addWidget(self.separator)
         self.statisticsLayout.addWidget(self.commentWidget)
-        self.statisticsLayout.setAlignment(Qt.AlignLeft)
+        self.statisticsLayout.setAlignment(Qt.AlignmentFlag.AlignLeft)
 
         # description label
         self.vBoxLayout.addSpacing(20)
@@ -189,7 +189,7 @@ class AppInfoCard(SimpleCardWidget):
         self.vBoxLayout.addSpacing(12)
         self.buttonLayout.setContentsMargins(0, 0, 0, 0)
         self.vBoxLayout.addLayout(self.buttonLayout)
-        self.buttonLayout.addWidget(self.tagButton, 0, Qt.AlignLeft)
+        self.buttonLayout.addWidget(self.tagButton, 0, Qt.AlignmentFlag.AlignLeft)
         self.buttonLayout.addWidget(self.shareButton, 0, Qt.AlignRight)
 
 
@@ -475,7 +475,7 @@ if __name__ == '__main__':
     # enable dpi scale
     QApplication.setHighDpiScaleFactorRoundingPolicy(
         Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
     # setTheme(Theme.DARK)

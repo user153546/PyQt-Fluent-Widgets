@@ -156,7 +156,7 @@ class ShortcutMenuItemDelegate(MenuItemDelegate):
         painter.translate(option.rect.width()-sw-20, 0)
 
         rect = QRectF(0, option.rect.y(), sw, option.rect.height())
-        painter.drawText(rect, Qt.AlignLeft | Qt.AlignVCenter, shortcut)
+        painter.drawText(rect, Qt.AlignmentFlag.AlignLeft | Qt.AlignVCenter, shortcut)
 
         painter.restore()
 

@@ -50,7 +50,7 @@ class FlyoutViewBase(QWidget):
     def __init__(self, parent=None):
         super().__init__(parent=parent)
 
-    def addWidget(self, widget: QWidget, stretch=0, align=Qt.AlignLeft):
+    def addWidget(self, widget: QWidget, stretch=0, align=Qt.AlignmentFlag.AlignLeft):
         raise NotImplementedError
 
     def backgroundColor(self):
@@ -170,7 +170,7 @@ class FlyoutView(FlyoutViewBase):
         self._adjustImage()
         self._addImageToLayout()
 
-    def addWidget(self, widget: QWidget, stretch=0, align=Qt.AlignLeft):
+    def addWidget(self, widget: QWidget, stretch=0, align=Qt.AlignmentFlag.AlignLeft):
         """ add widget to view """
         self.widgetLayout.addSpacing(8)
         self.widgetLayout.addWidget(widget, stretch, align)

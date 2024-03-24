@@ -39,26 +39,26 @@ class Demo(QWidget):
 
         self.gridLayout.setContentsMargins(100, 50, 100, 50)
         self.gridLayout.addWidget(self.spinBox, 0, 0)
-        self.gridLayout.addWidget(self.compactSpinBox, 0, 1, Qt.AlignLeft)
+        self.gridLayout.addWidget(self.compactSpinBox, 0, 1, Qt.AlignmentFlag.AlignLeft)
 
         self.gridLayout.addWidget(self.doubleSpinBox, 1, 0)
-        self.gridLayout.addWidget(self.compactDoubleSpinBox, 1, 1, Qt.AlignLeft)
+        self.gridLayout.addWidget(self.compactDoubleSpinBox, 1, 1, Qt.AlignmentFlag.AlignLeft)
 
         self.gridLayout.addWidget(self.timeEdit, 2, 0)
-        self.gridLayout.addWidget(self.compactTimeEdit, 2, 1, Qt.AlignLeft)
+        self.gridLayout.addWidget(self.compactTimeEdit, 2, 1, Qt.AlignmentFlag.AlignLeft)
 
         self.gridLayout.addWidget(self.dateEdit, 3, 0)
-        self.gridLayout.addWidget(self.compactDateEdit, 3, 1, Qt.AlignLeft)
+        self.gridLayout.addWidget(self.compactDateEdit, 3, 1, Qt.AlignmentFlag.AlignLeft)
 
         self.gridLayout.addWidget(self.dateTimeEdit, 4, 0)
-        self.gridLayout.addWidget(self.compactDateTimeEdit, 4, 1, Qt.AlignLeft)
+        self.gridLayout.addWidget(self.compactDateTimeEdit, 4, 1, Qt.AlignmentFlag.AlignLeft)
 
 
 if __name__ == '__main__':
     # enable dpi scale
     QApplication.setHighDpiScaleFactorRoundingPolicy(
         Qt.HighDpiScaleFactorRoundingPolicy.PassThrough)
-    QApplication.setAttribute(Qt.AA_EnableHighDpiScaling)
+    QApplication.setAttribute(Qt.ApplicationAttribute.AA_EnableHighDpiScaling)
     QApplication.setAttribute(Qt.AA_UseHighDpiPixmaps)
 
     app = QApplication(sys.argv)

@@ -276,7 +276,7 @@ class FolderCard(ClickableWindow):
         painter.setFont(font)
         path = QFontMetrics(font).elidedText(
             self.folderPath, Qt.ElideRight, self.width()-24)
-        painter.drawText(x2, 37, self.width() - 16, 18, Qt.AlignLeft, path)
+        painter.drawText(x2, 37, self.width() - 16, 18, Qt.AlignmentFlag.AlignLeft, path)
 
 
 class AddFolderCard(ClickableWindow):

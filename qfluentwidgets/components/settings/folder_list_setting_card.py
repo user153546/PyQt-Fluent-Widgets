@@ -34,7 +34,7 @@ class FolderItem(QWidget):
         self.setFixedHeight(53)
         self.setSizePolicy(QSizePolicy.Ignored, QSizePolicy.Fixed)
         self.hBoxLayout.setContentsMargins(48, 0, 60, 0)
-        self.hBoxLayout.addWidget(self.folderLabel, 0, Qt.AlignLeft)
+        self.hBoxLayout.addWidget(self.folderLabel, 0, Qt.AlignmentFlag.AlignLeft)
         self.hBoxLayout.addSpacing(16)
         self.hBoxLayout.addStretch(1)
         self.hBoxLayout.addWidget(self.removeButton, 0, Qt.AlignRight)

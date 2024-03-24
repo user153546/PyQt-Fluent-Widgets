@@ -95,7 +95,7 @@ class CustomColorSettingCard(ExpandGroupSettingCard):
         self.radioLayout.setSizeConstraint(QVBoxLayout.SetMinimumSize)
 
         self.customColorLayout.setContentsMargins(48, 18, 44, 18)
-        self.customColorLayout.addWidget(self.customLabel, 0, Qt.AlignLeft)
+        self.customColorLayout.addWidget(self.customLabel, 0, Qt.AlignmentFlag.AlignLeft)
         self.customColorLayout.addWidget(self.chooseColorButton, 0, Qt.AlignRight)
         self.customColorLayout.setSizeConstraint(QHBoxLayout.SetMinimumSize)
 

@@ -51,7 +51,7 @@ class Pivot(QWidget):
         FluentStyleSheet.PIVOT.apply(self)
 
         self.hBoxLayout.setSpacing(0)
-        self.hBoxLayout.setAlignment(Qt.AlignLeft)
+        self.hBoxLayout.setAlignment(Qt.AlignmentFlag.AlignLeft)
         self.hBoxLayout.setContentsMargins(0, 0, 0, 0)
         self.hBoxLayout.setSizeConstraint(QHBoxLayout.SetMinimumSize)
 

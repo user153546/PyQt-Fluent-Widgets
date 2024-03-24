@@ -137,7 +137,7 @@ class BreadcrumbItem(BreadcrumbWidget):
         else:
             rect = QRectF(sw, 0, self.width() - sw, self.height())
 
-        painter.drawText(rect, Qt.AlignVCenter | Qt.AlignLeft, self.text)
+        painter.drawText(rect, Qt.AlignVCenter | Qt.AlignmentFlag.AlignLeft, self.text)
 
 
 

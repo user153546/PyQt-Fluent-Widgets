@@ -193,7 +193,7 @@ class SwitchButton(QWidget):
         if self.indicatorPos == IndicatorPosition.LEFT:
             self.hBox.addWidget(self.indicator)
             self.hBox.addWidget(self.label)
-            self.hBox.setAlignment(Qt.AlignLeft)
+            self.hBox.setAlignment(Qt.AlignmentFlag.AlignLeft)
         else:
             self.hBox.addWidget(self.label, 0, Qt.AlignRight)
             self.hBox.addWidget(self.indicator, 0, Qt.AlignRight)
